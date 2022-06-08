@@ -1,7 +1,7 @@
 import { FastifyPluginAsync } from 'fastify';
 import blipp from 'fastify-blipp';
 import fastifyCors from "@fastify/cors";
-// import { bottlecaps_api } from './bottlecaps/bottlecaps.api';
+import { images_api } from './images/images.api';
 import { main_router } from './routers/main_router';
 import { db_plugin } from './bd';
 
@@ -16,7 +16,7 @@ export const main_app: FastifyPluginAsync = async (app) => {
 
   // Load the plugins of this
   await app.register(main_router);
-  // await app.register(bottlecaps_api, { prefix: '/bottlecaps' });
+  await app.register(images_api, { prefix: '/images' });
 
   // when app starts, blip the installed routes on terminal
   app.blipp();
