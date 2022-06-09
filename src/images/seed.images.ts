@@ -1,9 +1,9 @@
 import { DocumentDefinition } from 'mongoose';
 import { MongoServerError } from 'mongodb';
-import { ImagesDocument, Images } from './Images.model';
+import { ImageDocument, Image } from './Image.model';
 import { prepare_db } from '../bd';
 
-const images: DocumentDefinition<ImagesDocument>[] = [
+const images: DocumentDefinition<ImageDocument>[] = [
   {
     file: 'demo1.png',
     title: "Demo 1",
@@ -30,7 +30,7 @@ const images: DocumentDefinition<ImagesDocument>[] = [
 
   // Delete all previous images if collection exists previously
   try {
-    await Images.collection.drop();
+    await Image.collection.drop();
     console.log('✅ Deleted all previous images');
   } catch (error) {
     const e = error as MongoServerError;
@@ -42,7 +42,7 @@ const images: DocumentDefinition<ImagesDocument>[] = [
   // Create all bottlecaps
   const docs = await Promise.all(
     images.map(async (r) => {
-      const bc_doc = await Images.create(r);
+      const bc_doc = await Image.create(r);
       return bc_doc;
     }),
   );
