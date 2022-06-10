@@ -1,9 +1,7 @@
 import { FastifyPluginAsync, FastifyReply, FastifyRequest } from 'fastify';
 import { Types } from 'mongoose';
 import { Image } from './Image.model';
-
-type GetType = FastifyRequest<{Params: { _id: string}}>;
-type PostType = FastifyRequest<{Body: { _id:string, file: string, title: string, description: string }}>;
+import { GetFastifyRequestType, PostFastifyRequestType } from '../types/types';
 
 // C(R)UD: List all images
 const list_images = async (request: FastifyRequest, reply: FastifyReply) => {
@@ -18,7 +16,7 @@ const list_images = async (request: FastifyRequest, reply: FastifyReply) => {
 };
 
 // C(R)UD: Get the details of a images
-const get_image = async (request: GetType, reply: FastifyReply) => {
+const get_image = async (request: GetFastifyRequestType, reply: FastifyReply) => {
   const _id = request.params._id;
 
   // Check we have a valid formatted objectid
@@ -39,7 +37,7 @@ const get_image = async (request: GetType, reply: FastifyReply) => {
 };
 
 // (C)RUD: Add new image
-const new_image = async (request: PostType, reply: FastifyReply) => {
+const new_image = async (request: PostFastifyRequestType, reply: FastifyReply) => {
   await Image.create(request.body).then((data) => {
     reply.code(200).send(data);
     request.log.info(`✅ New image ${request.body.file} created`);
@@ -51,7 +49,7 @@ const new_image = async (request: PostType, reply: FastifyReply) => {
 };
 
 // CR(U)D: Update image
-const update_image = async (request: PostType, reply: FastifyReply) => {
+const update_image = async (request: PostFastifyRequestType, reply: FastifyReply) => {
   const _id = request.body._id;
 
   // Check we have a valid formatted objectid
@@ -88,7 +86,7 @@ const delete_all_image = async (request: FastifyRequest, reply: FastifyReply) =>
 };
 
 // CRU(D): Delete a image
-const delete_image = async (request: GetType, reply: FastifyReply) => {
+const delete_image = async (request: GetFastifyRequestType, reply: FastifyReply) => {
   const _id = request.params._id;
 
   // Check we have a valid formatted objectid

@@ -2251,6 +2251,11 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-sweet-state@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/react-sweet-state/-/react-sweet-state-2.6.0.tgz#cf08aa5162d2ede41bcd86e192fcbd0255906b50"
+  integrity sha512-oASS1C8n0QnQPiXwwGQSruNkC/U704cipCQH8KpCGzbdm5yHoCwNMdkn7tkCcq+h8fO+2GeSCuhhOkSt1lKA9Q==
+
 readable-stream@^3.1.1, readable-stream@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.6.0.tgz#337bbda3adc0706bd3e024426a286d4b4b2c9198"
