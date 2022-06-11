@@ -5,7 +5,7 @@ import {
   export interface ImageDocument extends Document {
     file: string;
     title: string;
-    description: string;
+    author: string;
     userID: string;
   }
   
@@ -14,7 +14,7 @@ import {
     {
       file: { type: String, required: true, unique: true,  minlength: [3, 'File name min length 3'] },
       title: { type: String, required: true,  minlength: [3, 'Title min length 3'] },
-      description: { type: String, required: true,  minlength: [3, 'Description min length 3'] },
+      author: { type: String, required: true,  minlength: [3, 'Author min length 3'] },
       userID: {type:String, required:true, default:"1"}
     },
     {

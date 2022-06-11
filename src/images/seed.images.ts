@@ -5,21 +5,21 @@ import { prepare_db } from '../bd';
 
 const images: DocumentDefinition<ImageDocument>[] = [
   {
-    file: 'demo1.png',
+    file: 'demo1.jpg',
     title: "Demo 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    author: "@amargopastor",
     userID: "1"
   },
   {
-    file: 'demo2.png',
+    file: 'demo2.jpg',
     title: "Demo 2",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    author: "@amargopastor",
     userID: "1"
   },
   {
-    file: 'demo3.png',
+    file: 'demo3.jpg',
     title: "Demo 3",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    author: "@amargopastor",
     userID: "1"
   },
 ];

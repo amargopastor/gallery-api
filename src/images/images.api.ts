@@ -24,7 +24,7 @@ const get_image = async (request: FastifyRequestType, reply: FastifyReply) => {
     throw new Error('Please, pass an object id as route param');
   }
 
-  await Image.findById(_id).lean().then((data)=>{
+  await Image.findById(_id).sort({"createdAt": 1}).lean().then((data)=>{
     if (data) {
       reply.code(200).send(data);
       request.log.info(`✅ Found image ${_id}`);
