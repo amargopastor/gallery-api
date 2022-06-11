@@ -1,29 +1,5 @@
 # API Gallery {
 
-```
-api-gallery
-├─ .eslintrc.json
-├─ .gitignore
-├─ README.md
-├─ package.json
-├─ src
-│  ├─ app.ts
-│  ├─ bd.ts
-│  ├─ config.ts
-│  ├─ images
-│  │  ├─ Image.model.ts
-│  │  ├─ images.api.ts
-│  │  └─ seed.images.ts
-│  ├─ server.ts
-│  └─ types
-│     └─ types.ts
-├─ tsconfig.json
-└─ yarn.lock
-
-```
-
-# API Gallery {
-
 ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/amargopastor/api-gallery/main?color=blue&style=for-the-badge)
 ![npm type definitions](https://img.shields.io/npm/types/typescript?logo=typescript&logoColor=white&style=for-the-badge)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/amargopastor/api-gallery?color=blueviolet&label=CODE%20SIZE&logo=github&style=for-the-badge)
