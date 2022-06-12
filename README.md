@@ -1,9 +1,9 @@
-# API Gallery {
+# Gallery API {
 
-![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/amargopastor/api-gallery/main?color=blue&style=for-the-badge)
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/amargopastor/gallery-api/main?color=blue&style=for-the-badge)
 ![npm type definitions](https://img.shields.io/npm/types/typescript?logo=typescript&logoColor=white&style=for-the-badge)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/amargopastor/api-gallery?color=blueviolet&label=CODE%20SIZE&logo=github&style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/amargopastor/api-gallery?color=success&logo=github&logoColor=white&style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/amargopastor/gallery-api?color=blueviolet&label=CODE%20SIZE&logo=github&style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/amargopastor/gallery-api?color=success&logo=github&logoColor=white&style=for-the-badge)
 
 ```ts
 const images_router: FastifyPluginAsync = async (app) => {
@@ -48,10 +48,10 @@ To download and start the project you need to run the following commands:
 
 ```bash
 # Clone the project into your local pc
-git clone https://github.com/amargopastor/api-gallery.git
+git clone https://github.com/amargopastor/gallery-api.git
 
 # Move into it
-cd api-gallery
+cd gallery-api
 
 # Install all the necessary dependencies (you can check them in the package.json)
 yarn install
@@ -71,12 +71,12 @@ yarn run seed
 
 # Making of
 
-Read all about how this project has been made right [here](https://github.com/amargopastor/app-gallery/blob/main/docs/README.md).
+Read all about how this project has been made right [here](https://github.com/amargopastor/gallery-front/blob/main/docs/README.md).
 
 ## Project tree
 
 ```
-api-gallery
+gallery-api
 ├─ .eslintrc.json
 ├─ .gitignore
 ├─ README.md
